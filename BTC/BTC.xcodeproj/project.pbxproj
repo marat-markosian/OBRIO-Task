@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA4F76FF28EED76500CE8609 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F76FE28EED76500CE8609 /* Server.swift */; };
+		BA4F770128EEDB2F00CE8609 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F770028EEDB2F00CE8609 /* Singleton.swift */; };
+		BAEA25A928ED8CB500EE9E4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA25A828ED8CB500EE9E4E /* AppDelegate.swift */; };
+		BAEA25AB28ED8CB500EE9E4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA25AA28ED8CB500EE9E4E /* SceneDelegate.swift */; };
+		BAEA25AD28ED8CB500EE9E4E /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA25AC28ED8CB500EE9E4E /* FirstVC.swift */; };
+		BAEA25B328ED8CB500EE9E4E /* BTC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAEA25B128ED8CB500EE9E4E /* BTC.xcdatamodeld */; };
+		BAEA25B528ED8CBD00EE9E4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAEA25B428ED8CBD00EE9E4E /* Assets.xcassets */; };
+		BAEA25B828ED8CBD00EE9E4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEA25B628ED8CBD00EE9E4E /* LaunchScreen.storyboard */; };
+		BAEA25C328ED8CBD00EE9E4E /* BTCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA25C228ED8CBD00EE9E4E /* BTCTests.swift */; };
+		BAEA25CD28ED8CBE00EE9E4E /* BTCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA25CC28ED8CBE00EE9E4E /* BTCUITests.swift */; };
+		BAEA25CF28ED8CBE00EE9E4E /* BTCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA25CE28ED8CBE00EE9E4E /* BTCUITestsLaunchTests.swift */; };
+		BAEA25DF28ED906F00EE9E4E /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEA25DE28ED906F00EE9E4E /* SecondVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAEA25BF28ED8CBD00EE9E4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAEA259D28ED8CB500EE9E4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAEA25A428ED8CB500EE9E4E;
+			remoteInfo = BTC;
+		};
+		BAEA25C928ED8CBE00EE9E4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAEA259D28ED8CB500EE9E4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAEA25A428ED8CB500EE9E4E;
+			remoteInfo = BTC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA4F76FE28EED76500CE8609 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		BA4F770028EEDB2F00CE8609 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		BAEA25A528ED8CB500EE9E4E /* BTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BTC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAEA25A828ED8CB500EE9E4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAEA25AA28ED8CB500EE9E4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BAEA25AC28ED8CB500EE9E4E /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		BAEA25B228ED8CB500EE9E4E /* BTC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BTC.xcdatamodel; sourceTree = "<group>"; };
+		BAEA25B428ED8CBD00EE9E4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAEA25B728ED8CBD00EE9E4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAEA25B928ED8CBD00EE9E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAEA25BE28ED8CBD00EE9E4E /* BTCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BTCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAEA25C228ED8CBD00EE9E4E /* BTCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCTests.swift; sourceTree = "<group>"; };
+		BAEA25C828ED8CBE00EE9E4E /* BTCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BTCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAEA25CC28ED8CBE00EE9E4E /* BTCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCUITests.swift; sourceTree = "<group>"; };
+		BAEA25CE28ED8CBE00EE9E4E /* BTCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BAEA25DE28ED906F00EE9E4E /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAEA25A228ED8CB500EE9E4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEA25BB28ED8CBD00EE9E4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEA25C528ED8CBD00EE9E4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAEA259C28ED8CB500EE9E4E = {
+			isa = PBXGroup;
+			children = (
+				BAEA25A728ED8CB500EE9E4E /* BTC */,
+				BAEA25C128ED8CBD00EE9E4E /* BTCTests */,
+				BAEA25CB28ED8CBE00EE9E4E /* BTCUITests */,
+				BAEA25A628ED8CB500EE9E4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAEA25A628ED8CB500EE9E4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAEA25A528ED8CB500EE9E4E /* BTC.app */,
+				BAEA25BE28ED8CBD00EE9E4E /* BTCTests.xctest */,
+				BAEA25C828ED8CBE00EE9E4E /* BTCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAEA25A728ED8CB500EE9E4E /* BTC */ = {
+			isa = PBXGroup;
+			children = (
+				BAEA25DB28ED8D9300EE9E4E /* Model */,
+				BAEA25DC28ED8D9F00EE9E4E /* View */,
+				BAEA25DD28ED8DA500EE9E4E /* Controller */,
+				BAEA25A828ED8CB500EE9E4E /* AppDelegate.swift */,
+				BAEA25AA28ED8CB500EE9E4E /* SceneDelegate.swift */,
+				BAEA25B428ED8CBD00EE9E4E /* Assets.xcassets */,
+				BAEA25B628ED8CBD00EE9E4E /* LaunchScreen.storyboard */,
+				BAEA25B928ED8CBD00EE9E4E /* Info.plist */,
+				BAEA25B128ED8CB500EE9E4E /* BTC.xcdatamodeld */,
+			);
+			path = BTC;
+			sourceTree = "<group>";
+		};
+		BAEA25C128ED8CBD00EE9E4E /* BTCTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAEA25C228ED8CBD00EE9E4E /* BTCTests.swift */,
+			);
+			path = BTCTests;
+			sourceTree = "<group>";
+		};
+		BAEA25CB28ED8CBE00EE9E4E /* BTCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BAEA25CC28ED8CBE00EE9E4E /* BTCUITests.swift */,
+				BAEA25CE28ED8CBE00EE9E4E /* BTCUITestsLaunchTests.swift */,
+			);
+			path = BTCUITests;
+			sourceTree = "<group>";
+		};
+		BAEA25DB28ED8D9300EE9E4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA4F76FE28EED76500CE8609 /* Server.swift */,
+				BA4F770028EEDB2F00CE8609 /* Singleton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAEA25DC28ED8D9F00EE9E4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAEA25DD28ED8DA500EE9E4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BAEA25AC28ED8CB500EE9E4E /* FirstVC.swift */,
+				BAEA25DE28ED906F00EE9E4E /* SecondVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAEA25A428ED8CB500EE9E4E /* BTC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAEA25D228ED8CBE00EE9E4E /* Build configuration list for PBXNativeTarget "BTC" */;
+			buildPhases = (
+				BAEA25A128ED8CB500EE9E4E /* Sources */,
+				BAEA25A228ED8CB500EE9E4E /* Frameworks */,
+				BAEA25A328ED8CB500EE9E4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BTC;
+			productName = BTC;
+			productReference = BAEA25A528ED8CB500EE9E4E /* BTC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAEA25BD28ED8CBD00EE9E4E /* BTCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAEA25D528ED8CBE00EE9E4E /* Build configuration list for PBXNativeTarget "BTCTests" */;
+			buildPhases = (
+				BAEA25BA28ED8CBD00EE9E4E /* Sources */,
+				BAEA25BB28ED8CBD00EE9E4E /* Frameworks */,
+				BAEA25BC28ED8CBD00EE9E4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAEA25C028ED8CBD00EE9E4E /* PBXTargetDependency */,
+			);
+			name = BTCTests;
+			productName = BTCTests;
+			productReference = BAEA25BE28ED8CBD00EE9E4E /* BTCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BAEA25C728ED8CBD00EE9E4E /* BTCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAEA25D828ED8CBE00EE9E4E /* Build configuration list for PBXNativeTarget "BTCUITests" */;
+			buildPhases = (
+				BAEA25C428ED8CBD00EE9E4E /* Sources */,
+				BAEA25C528ED8CBD00EE9E4E /* Frameworks */,
+				BAEA25C628ED8CBD00EE9E4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAEA25CA28ED8CBE00EE9E4E /* PBXTargetDependency */,
+			);
+			name = BTCUITests;
+			productName = BTCUITests;
+			productReference = BAEA25C828ED8CBE00EE9E4E /* BTCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAEA259D28ED8CB500EE9E4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					BAEA25A428ED8CB500EE9E4E = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					BAEA25BD28ED8CBD00EE9E4E = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = BAEA25A428ED8CB500EE9E4E;
+					};
+					BAEA25C728ED8CBD00EE9E4E = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = BAEA25A428ED8CB500EE9E4E;
+					};
+				};
+			};
+			buildConfigurationList = BAEA25A028ED8CB500EE9E4E /* Build configuration list for PBXProject "BTC" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAEA259C28ED8CB500EE9E4E;
+			productRefGroup = BAEA25A628ED8CB500EE9E4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAEA25A428ED8CB500EE9E4E /* BTC */,
+				BAEA25BD28ED8CBD00EE9E4E /* BTCTests */,
+				BAEA25C728ED8CBD00EE9E4E /* BTCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAEA25A328ED8CB500EE9E4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAEA25B828ED8CBD00EE9E4E /* LaunchScreen.storyboard in Resources */,
+				BAEA25B528ED8CBD00EE9E4E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEA25BC28ED8CBD00EE9E4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEA25C628ED8CBD00EE9E4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAEA25A128ED8CB500EE9E4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAEA25AD28ED8CB500EE9E4E /* FirstVC.swift in Sources */,
+				BA4F770128EEDB2F00CE8609 /* Singleton.swift in Sources */,
+				BAEA25DF28ED906F00EE9E4E /* SecondVC.swift in Sources */,
+				BAEA25B328ED8CB500EE9E4E /* BTC.xcdatamodeld in Sources */,
+				BAEA25A928ED8CB500EE9E4E /* AppDelegate.swift in Sources */,
+				BA4F76FF28EED76500CE8609 /* Server.swift in Sources */,
+				BAEA25AB28ED8CB500EE9E4E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEA25BA28ED8CBD00EE9E4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAEA25C328ED8CBD00EE9E4E /* BTCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAEA25C428ED8CBD00EE9E4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAEA25CF28ED8CBE00EE9E4E /* BTCUITestsLaunchTests.swift in Sources */,
+				BAEA25CD28ED8CBE00EE9E4E /* BTCUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAEA25C028ED8CBD00EE9E4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAEA25A428ED8CB500EE9E4E /* BTC */;
+			targetProxy = BAEA25BF28ED8CBD00EE9E4E /* PBXContainerItemProxy */;
+		};
+		BAEA25CA28ED8CBE00EE9E4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAEA25A428ED8CB500EE9E4E /* BTC */;
+			targetProxy = BAEA25C928ED8CBE00EE9E4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BAEA25B628ED8CBD00EE9E4E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAEA25B728ED8CBD00EE9E4E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAEA25D028ED8CBE00EE9E4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAEA25D128ED8CBE00EE9E4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAEA25D328ED8CBE00EE9E4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KC6374BX74;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BTC/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markosian.BTC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAEA25D428ED8CBE00EE9E4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KC6374BX74;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BTC/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markosian.BTC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BAEA25D628ED8CBE00EE9E4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KC6374BX74;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markosian.BTCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BTC.app/BTC";
+			};
+			name = Debug;
+		};
+		BAEA25D728ED8CBE00EE9E4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KC6374BX74;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markosian.BTCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BTC.app/BTC";
+			};
+			name = Release;
+		};
+		BAEA25D928ED8CBE00EE9E4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KC6374BX74;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markosian.BTCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BTC;
+			};
+			name = Debug;
+		};
+		BAEA25DA28ED8CBE00EE9E4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KC6374BX74;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = markosian.BTCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BTC;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAEA25A028ED8CB500EE9E4E /* Build configuration list for PBXProject "BTC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAEA25D028ED8CBE00EE9E4E /* Debug */,
+				BAEA25D128ED8CBE00EE9E4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAEA25D228ED8CBE00EE9E4E /* Build configuration list for PBXNativeTarget "BTC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAEA25D328ED8CBE00EE9E4E /* Debug */,
+				BAEA25D428ED8CBE00EE9E4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAEA25D528ED8CBE00EE9E4E /* Build configuration list for PBXNativeTarget "BTCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAEA25D628ED8CBE00EE9E4E /* Debug */,
+				BAEA25D728ED8CBE00EE9E4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAEA25D828ED8CBE00EE9E4E /* Build configuration list for PBXNativeTarget "BTCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAEA25D928ED8CBE00EE9E4E /* Debug */,
+				BAEA25DA28ED8CBE00EE9E4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BAEA25B128ED8CB500EE9E4E /* BTC.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BAEA25B228ED8CB500EE9E4E /* BTC.xcdatamodel */,
+			);
+			currentVersion = BAEA25B228ED8CB500EE9E4E /* BTC.xcdatamodel */;
+			path = BTC.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BAEA259D28ED8CB500EE9E4E /* Project object */;
+}
