@@ -24,10 +24,11 @@ class FirstVC: UIViewController {
         setUpSubviews()
         setUpAutoLayout()
     }
-
+        
     private func setUpSubviews() {
         server.delegate = self
         server.getBTCcost()
+        server.getBalance()
         
         view.addSubview(btcCost)
         view.addSubview(balance)
@@ -40,6 +41,14 @@ class FirstVC: UIViewController {
         balance.font = UIFont(name: "Avenir-Heavy", size: 40)
         balance.textColor = .black
         balance.text = "0"
+        
+        addBalance.setTitleColor(.black, for: .normal)
+        addBalance.setTitle("Replenish the balance", for: .normal)
+        addBalance.layer.cornerRadius = 5
+        addBalance.layer.borderColor = CGColor.init(red: 104/255, green: 240/255, blue: 135/255, alpha: 0.5)
+        addBalance.layer.borderWidth = 2
+        addBalance.layer.cornerRadius = 10
+        addBalance.addTarget(self, action: #selector(goToReplenishment), for: .touchUpInside)
     }
     
     private func setUpAutoLayout() {
@@ -53,19 +62,42 @@ class FirstVC: UIViewController {
             btcCost.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
             
             balance.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            balance.topAnchor.constraint(equalTo: btcCost.bottomAnchor, constant: 20)
+            balance.topAnchor.constraint(equalTo: btcCost.bottomAnchor, constant: 20),
+            
+            addBalance.topAnchor.constraint(equalTo: balance.bottomAnchor, constant: 20),
+            addBalance.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+    }
+    
+    @objc private func goToReplenishment() {
+        let nextVC = ReplenishmentVC()
+        nextVC.delegate = self
+        present(nextVC, animated: true)
     }
 
 }
 
 extension FirstVC: InfoDelegate {
     
-    func updateInfo() {
+    func updateBalance() {
+        DispatchQueue.main.async {
+            self.balance.text = "\(BitcoinInfo.instance.balance) BTC"
+        }
+    }
+    
+    func updateCost() {
         DispatchQueue.main.async {
             self.btcCost.text = "1 BTC = \(BitcoinInfo.instance.rate)$"
         }
     }
+    
+}
+
+extension FirstVC: ReplenishmentDelegate {
+    func replenish(count: Float) {
+        server.replenishBalance(count)
+    }
+    
     
 }
 

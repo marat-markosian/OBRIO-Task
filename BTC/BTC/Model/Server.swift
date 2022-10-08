@@ -5,11 +5,13 @@
 //  Created by Марат Маркосян on 06.10.2022.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
 protocol InfoDelegate {
     
-    func updateInfo()
+    func updateCost()
+    func updateBalance()
     
 }
 
@@ -49,13 +51,75 @@ struct Server {
                //create json object from data
                 let newData = try! JSONDecoder().decode(B.self, from: data)
                 BitcoinInfo.instance.rate = newData.bpi.USD.rate_float
-                delegate?.updateInfo()
+                delegate?.updateCost()
             } catch let error {
               print(error.localizedDescription)
             }
          })
 
          task.resume()
+    }
+    
+    func save(_ count: Float) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Balance", in: managedContext)!
+        
+        let balance = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        balance.setValue(count, forKeyPath: "count")
+        
+        do {
+          try managedContext.save()
+        } catch let error as NSError {
+          print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func getBalance() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Balance")
+        
+        do {
+            let balance = try managedContext.fetch(fetchRequest)
+            if balance.count == 0 {
+                BitcoinInfo.instance.balance = 0
+            } else if let count = balance[0].value(forKeyPath: "count") as? Float {
+                BitcoinInfo.instance.balance = count
+            }
+            delegate?.updateBalance()
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func replenishBalance(_ count: Float) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Balance")
+        let newCount  = BitcoinInfo.instance.balance + count
+        BitcoinInfo.instance.balance = newCount
+        do {            
+            let balance = try managedContext.fetch(fetchRequest)
+            if balance.isEmpty {
+                save(newCount)
+            } else {
+                balance[0].setValue(newCount, forKeyPath: "count")
+                try managedContext.save()
+            }
+            delegate?.updateBalance()
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
     }
     
 }
