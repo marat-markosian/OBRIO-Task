@@ -60,7 +60,7 @@ struct Server {
          task.resume()
     }
     
-    func save(_ count: Float) {
+    func saveBalance(_ count: Float) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
           return
         }
@@ -72,10 +72,57 @@ struct Server {
         balance.setValue(count, forKeyPath: "count")
         
         do {
-          try managedContext.save()
+            try managedContext.save()
         } catch let error as NSError {
-          print("Could not save. \(error), \(error.userInfo)")
+            print("Could not save. \(error), \(error.userInfo)")
         }
+    }
+    
+    func saveTransaction(with amount: Float, category: String) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Transaction", in: managedContext)!
+        
+        let transaction = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        transaction.setValue(amount, forKeyPath: "amount")
+        transaction.setValue(category, forKeyPath: "category")
+        transaction.setValue(Date(), forKey: "date")
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func getTransactions() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Transaction")
+        BitcoinInfo.instance.transactions = []
+        do {
+            let transactions = try managedContext.fetch(fetchRequest)
+            if transactions.count == 0 {
+                BitcoinInfo.instance.transactions = []
+            } else {
+                for transaction in transactions {
+                    let am = transaction.value(forKeyPath: "amount") as? Float
+                    let category = transaction.value(forKeyPath: "category") as? String
+                    let date = transaction.value(forKeyPath: "date") as? Date
+                    let trans = TransactionData(amount: am!, category: category!, date: date!)
+                    BitcoinInfo.instance.transactions.append(trans)
+                }
+            }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+
     }
     
     func getBalance() {
@@ -99,19 +146,25 @@ struct Server {
         }
     }
     
-    func replenishBalance(_ count: Float) {
+    func replenishBalance(_ count: Float, action: String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
         let managedContext = appDelegate.persistentContainer.viewContext
         
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Balance")
-        let newCount  = BitcoinInfo.instance.balance + count
+
+        var newCount  = BitcoinInfo.instance.balance
+        if action == "+" {
+            newCount  = BitcoinInfo.instance.balance + count
+        } else {
+            newCount  = BitcoinInfo.instance.balance - count
+        }
         BitcoinInfo.instance.balance = newCount
         do {            
             let balance = try managedContext.fetch(fetchRequest)
             if balance.isEmpty {
-                save(newCount)
+                saveBalance(newCount)
             } else {
                 balance[0].setValue(newCount, forKeyPath: "count")
                 try managedContext.save()

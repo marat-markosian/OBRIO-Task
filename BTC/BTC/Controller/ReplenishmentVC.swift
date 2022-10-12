@@ -72,6 +72,7 @@ class ReplenishmentVC: UIViewController {
     
     @objc private func replenishBalance() {
         if let count = Float(btcTxt.text!) {
+            
             delegate?.replenish(count: count)
             dismiss(animated: true)
         }

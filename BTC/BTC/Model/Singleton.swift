@@ -6,6 +6,13 @@
 //
 
 import Foundation
+import CoreData
+
+struct TransactionData {
+    let amount: Float
+    let category: String
+    let date: Date
+}
 
 struct BitcoinInfo {
     
@@ -13,5 +20,6 @@ struct BitcoinInfo {
     
     var rate: Float = 0
     var balance: Float = 0
+    var transactions: [TransactionData] = []
     
 }
