@@ -11,7 +11,7 @@ import CoreData
 struct TransactionData {
     let amount: Float
     let category: String
-    let date: Date
+    let date: String
 }
 
 struct BitcoinInfo {

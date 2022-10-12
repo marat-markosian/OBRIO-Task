@@ -6,7 +6,7 @@
     <entity name="Transaction" representedClassName="Transaction" syncable="YES" codeGenerationType="class">
         <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="category" optional="YES" attributeType="String"/>
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Balance" positionX="-63" positionY="-18" width="128" height="44"/>

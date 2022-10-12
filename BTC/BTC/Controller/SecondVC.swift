@@ -17,7 +17,7 @@ class SecondVC: UIViewController {
     private lazy var categoriesTbl = UITableView()
     private lazy var addBtn = UIButton()
     
-    var categories = ["groceries", "taxi", "electronics", "restaurant", "other"]
+    var categories = ["Groceries", "Taxi", "Electronics", "Restaurant", "Other"]
     var selectedIndexPath: IndexPath?
     var selectedCategory = ""
     
@@ -91,7 +91,7 @@ class SecondVC: UIViewController {
         } else {
             let amount = Float(amountTxt.text!)!
             Server().saveTransaction(with: amount, category: selectedCategory)
-            Server().replenishBalance(amount, action: "-")
+            Server().updateBalance(amount, action: "-")
             delegate?.updateTransactions()
             dismiss(animated: true)
         }

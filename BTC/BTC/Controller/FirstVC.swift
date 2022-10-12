@@ -121,6 +121,7 @@ extension FirstVC: UITableViewDelegate {
 }
 
 extension FirstVC: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         BitcoinInfo.instance.transactions.count
     }
@@ -162,7 +163,7 @@ extension FirstVC: InfoDelegate {
 extension FirstVC: ReplenishmentDelegate {
     func replenish(count: Float) {
         server.saveTransaction(with: count, category: "Replenishment")
-        server.replenishBalance(count, action: "+")
+        server.updateBalance(count, action: "+")
         server.getTransactions()
         DispatchQueue.main.async {
             self.transactionsTbl.reloadData()

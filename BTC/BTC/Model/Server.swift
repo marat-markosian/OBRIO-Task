@@ -87,9 +87,15 @@ struct Server {
         
         let transaction = NSManagedObject(entity: entity, insertInto: managedContext)
         
+        let now = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
+        let formattedDate = formatter.string(from: now)
+        
         transaction.setValue(amount, forKeyPath: "amount")
         transaction.setValue(category, forKeyPath: "category")
-        transaction.setValue(Date(), forKey: "date")
+        transaction.setValue(formattedDate, forKey: "date")
         
         do {
             try managedContext.save()
@@ -111,10 +117,10 @@ struct Server {
             if transactions.count == 0 {
                 BitcoinInfo.instance.transactions = []
             } else {
-                for transaction in transactions {
+                for transaction in transactions.reversed() {
                     let am = transaction.value(forKeyPath: "amount") as? Float
                     let category = transaction.value(forKeyPath: "category") as? String
-                    let date = transaction.value(forKeyPath: "date") as? Date
+                    let date = transaction.value(forKeyPath: "date") as? String
                     let trans = TransactionData(amount: am!, category: category!, date: date!)
                     BitcoinInfo.instance.transactions.append(trans)
                 }
@@ -146,7 +152,7 @@ struct Server {
         }
     }
     
-    func replenishBalance(_ count: Float, action: String) {
+    func updateBalance(_ count: Float, action: String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
